@@ -1,4 +1,6 @@
 import React from "react";
+import Medication from "../models/Medication.js";
+import PropTypes from "prop-types";
 
 class NewMedForm extends React.Component {
 
@@ -10,7 +12,8 @@ class NewMedForm extends React.Component {
   handleNewMedFormSubmission(event) {
     event.preventDefault();
     const { _name, _take } = this.refs;
-    alert(`Data Gathered! ${_name.value}, ${_take.value}`);
+    var newMedication = new Medication(_name.value, _take.value);
+    this.props.onNewMedCreation(newMedication);
   }
 
   render(){
@@ -34,5 +37,9 @@ class NewMedForm extends React.Component {
   }
 
 }
+
+NewMedForm.propTypes = {
+  onNewMedCreation: PropTypes.func
+};
 
 export default NewMedForm;

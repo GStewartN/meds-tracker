@@ -1,23 +1,13 @@
 import React from "react";
 import Medication from "./Medication";
+import PropTypes from 'prop-types';
 
-var masterMedList = [
-  {
-    name: "Aspirin",
-    take: "daily"
-  },
-  {
-    name: "Singulair",
-    take: "daily"
-  }
-];
-
-function MedsList(){
+function MedsList(props){
   return (
     <div>
       <h3>Medications:</h3>
       <hr/>
-      {masterMedList.map((medication, index) =>
+      {props.medList.map((medication, index) =>
         <Medication
           name={medication.name}
           take={medication.take}
@@ -26,5 +16,9 @@ function MedsList(){
     </div>
   );
 }
+
+MedsList.propTypes = {
+  medList: PropTypes.array
+};
 
 export default MedsList;
