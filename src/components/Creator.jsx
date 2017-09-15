@@ -1,13 +1,11 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import MedsList from "./MedsList";
+import NewMedControl from "./NewMedControl";
 
 function Creator(){
   return (
     <div>
-      <h5>Click the button to begin tracking a medication.</h5>
-      <Button>Add Medication</Button>
-      <hr/>
+      <NewMedControl/>
       <MedsList/>
     </div>
   );
