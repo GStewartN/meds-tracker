@@ -6,6 +6,7 @@ function Medication(props){
     <div>
       <h5>{props.title}</h5>
       <p><em>{props.name}</em></p>
+      <hr/>
     </div>
   );
 }
