@@ -3,22 +3,24 @@ import Medication from "./Medication";
 
 var masterMedList = [
   {
-    title: "Medication:",
-    name: "Aspirin"
+    name: "Aspirin",
+    take: "daily"
   },
   {
-    title: "Medication",
-    name: "Singulair"
+    name: "Singulair",
+    take: "daily"
   }
 ];
 
 function MedsList(){
     return (
       <div>
+        <h3>Medications:</h3>
+        <hr/>
         {masterMedList.map((medication, index) =>
           <Medication
-            title={medication.title}
             name={medication.name}
+            take={medication.take}
             key={index}/>
         )}
       </div>

@@ -4,16 +4,16 @@ import PropTypes from "prop-types";
 function Medication(props){
   return(
     <div>
-      <h5>{props.title}</h5>
       <p><em>{props.name}</em></p>
+      <p>{props.take}</p>
       <hr/>
     </div>
   );
 }
 
 Medication.propTypes = {
-  title: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  take: PropTypes.string
 };
 
 export default Medication;
