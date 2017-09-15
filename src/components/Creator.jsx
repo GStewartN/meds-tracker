@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import MedsList from "./MedsList";
 
-function Creator(props){
+function Creator(){
   return (
     <div>
       <h5>Click the button to begin tracking a medication.</h5>

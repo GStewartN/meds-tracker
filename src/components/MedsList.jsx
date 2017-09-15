@@ -1,10 +1,12 @@
 import React from "react";
+import Medication from "./Medication";
 
-function MedsList(props){
+function MedsList(){
   return (
     <div>
-      <h5>Medication:</h5>
-      <p><em>Aspirin</em></p>
+      <Medication
+        title="Medication"
+        name="Aspirin"/>
     </div>
   );
 }
