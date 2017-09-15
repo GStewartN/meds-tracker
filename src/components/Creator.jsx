@@ -4,19 +4,19 @@ import NewMedControl from "./NewMedControl";
 
 class Creator extends React.Component {
 
-constructor(props){
-  super(props);
-  this.state = {
-    masterMedList: [],
-  };
-  this.addNewMedToList = this.addNewMedToList.bind(this);
-}
+  constructor(props){
+    super(props);
+    this.state = {
+      masterMedList: [],
+    };
+    this.addNewMedToList = this.addNewMedToList.bind(this);
+  }
 
-addNewMedToList(newMedication){
-  var newMasterMedList = this.state.masterMedList.slice();
+  addNewMedToList(newMedication){
+    var newMasterMedList = this.state.masterMedList.slice();
     newMasterMedList.push(newMedication);
     this.setState({masterMedList: newMasterMedList});
-}
+  }
 
   render(){
     return (

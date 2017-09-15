@@ -7,12 +7,23 @@ class NewMedControl extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {formVisibleOnPage: false};
-    this.handleDisplayingNewMedForm = this.handleDisplayingNewMedForm.bind(this);
+    this.showForm = this.showForm.bind(this);
+    this.hideForm = this.hideForm.bind(this);
+    this.state = {
+      formVisibleOnPage: false
+    };
   }
 
   handleDisplayingNewMedForm(){
     this.setState({formVisibleOnPage: true});
+  }
+
+  showForm() {
+    this.setState({formVisibleOnPage: true});
+  }
+
+  hideForm() {
+    this.setState({formVisibleOnPage: false});
   }
 
 
@@ -20,10 +31,11 @@ class NewMedControl extends React.Component {
     let formAreaContent = null;
     if (this.state.formVisibleOnPage){
       formAreaContent = <NewMedForm
-                          onNewMedCreation={this.props.onNewMedCreation}/>;
+        onNewMedCreation={this.props.onNewMedCreation}
+        hideFormAfterSubmission={this.hideForm}/>;
     } else {
       formAreaContent = <Button
-                          onClick={this.handleDisplayingNewMedForm}>Add Medication</Button>;
+        onClick={this.showForm}>Add Medication</Button>;
     }
     return(
       <div>

@@ -14,6 +14,7 @@ class NewMedForm extends React.Component {
     const { _name, _take } = this.refs;
     var newMedication = new Medication(_name.value, _take.value);
     this.props.onNewMedCreation(newMedication);
+    this.props.hideFormAfterSubmission();
   }
 
   render(){
@@ -39,7 +40,8 @@ class NewMedForm extends React.Component {
 }
 
 NewMedForm.propTypes = {
-  onNewMedCreation: PropTypes.func
+  onNewMedCreation: PropTypes.func,
+  hideFormAfterSubmission: PropTypes.func
 };
 
 export default NewMedForm;

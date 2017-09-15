@@ -1,6 +1,6 @@
 import React from "react";
 import Medication from "./Medication";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 function MedsList(props){
   return (

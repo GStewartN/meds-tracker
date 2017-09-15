@@ -5,4 +5,4 @@ class Medication {
   }
 }
 
-export default Medication
+export default Medication;
