@@ -10,7 +10,7 @@ class NewMedControl extends React.Component {
     this.handleDisplayingNewMedForm = this.handleDisplayingNewMedForm.bind(this);
   }
 
-  handleDisplayingNewMedForm(event){
+  handleDisplayingNewMedForm(){
     this.setState({formVisibleOnPage: true});
   }
 
@@ -18,9 +18,9 @@ class NewMedControl extends React.Component {
   render(){
     let formAreaContent = null;
     if (this.state.formVisibleOnPage){
-      formAreaContent = <NewMedForm/>
+      formAreaContent = <NewMedForm/>;
     } else {
-      formAreaContent = <Button onClick={this.handleDisplayingNewMedForm}>Add Medication</Button>
+      formAreaContent = <Button onClick={this.handleDisplayingNewMedForm}>Add Medication</Button>;
     }
     return(
       <div>

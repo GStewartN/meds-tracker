@@ -13,18 +13,18 @@ var masterMedList = [
 ];
 
 function MedsList(){
-    return (
-      <div>
-        <h3>Medications:</h3>
-        <hr/>
-        {masterMedList.map((medication, index) =>
-          <Medication
-            name={medication.name}
-            take={medication.take}
-            key={index}/>
-        )}
-      </div>
-    );
+  return (
+    <div>
+      <h3>Medications:</h3>
+      <hr/>
+      {masterMedList.map((medication, index) =>
+        <Medication
+          name={medication.name}
+          take={medication.take}
+          key={index}/>
+      )}
+    </div>
+  );
 }
 
 export default MedsList;
