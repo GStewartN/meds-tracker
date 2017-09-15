@@ -12,6 +12,25 @@ class Creator extends React.Component {
     this.addNewMedToList = this.addNewMedToList.bind(this);
   }
 
+  componentDidMount(){
+    this.timeSinceTakenChecker = setInterval(() =>
+      this.updateMedTimeSinceTaken(),
+      5000
+    );
+  }
+
+  updateMedTimeSinceTaken(){
+    let newMasterMedList = this.state.masterMedList.slice();
+    newMasterMedList.forEach((medication) =>
+      medication.setTimeSinceTaken()
+    );
+    this.setState({masterMedList: newMasterMedList});
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.timeSinceTakenChecker);
+  }
+
   addNewMedToList(newMedication){
     var newMasterMedList = this.state.masterMedList.slice();
     newMasterMedList.push(newMedication);

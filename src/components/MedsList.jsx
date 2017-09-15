@@ -11,6 +11,7 @@ function MedsList(props){
         <Medication
           name={medication.name}
           take={medication.take}
+          timeSinceTaken={medication.timeSinceTaken}
           key={index}/>
       )}
     </div>

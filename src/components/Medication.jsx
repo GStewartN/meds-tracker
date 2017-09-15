@@ -6,6 +6,7 @@ function Medication(props){
     <div>
       <p><em>{props.name}</em></p>
       <p>{props.take}</p>
+      <p>{props.timeSinceTaken}</p>
       <hr/>
     </div>
   );
@@ -13,7 +14,8 @@ function Medication(props){
 
 Medication.propTypes = {
   name: PropTypes.string,
-  take: PropTypes.string
+  take: PropTypes.string,
+  timeSinceTaken: PropTypes.string
 };
 
 export default Medication;

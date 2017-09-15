@@ -37,6 +37,7 @@ class NewMedControl extends React.Component {
       formAreaContent = <Button
         onClick={this.showForm}>Add Medication</Button>;
     }
+    
     return(
       <div>
         <h5>Click the button to begin tracking a medication.</h5>
