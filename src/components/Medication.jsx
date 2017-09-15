@@ -5,8 +5,8 @@ function Medication(props){
   return(
     <div>
       <p><em>{props.name}</em></p>
-      <p>{props.take}</p>
-      <p>{props.timeSinceTaken}</p>
+      <p>I need to take this: {props.take}</p>
+      <p>My last dose was: {props.timeSinceTaken} ago.</p>
       <hr/>
     </div>
   );
