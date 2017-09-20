@@ -10,6 +10,11 @@ class Creator extends React.Component {
       masterMedList: [],
     };
     this.addNewMedToList = this.addNewMedToList.bind(this);
+    this.handleTimerReset = this.handleTimerReset.bind(this);
+  }
+
+  handleTimerReset(medicationId){
+    console.log("Clicky-Clickety-Click");
   }
 
   componentDidMount(){
@@ -43,7 +48,8 @@ class Creator extends React.Component {
         <NewMedControl
           onNewMedCreation={this.addNewMedToList}/>
         <MedsList
-          medList = {this.state.masterMedList}/>
+          medList = {this.state.masterMedList}
+          handleTimerReset={this.handleTimerReset}/>
       </div>
     );
   }

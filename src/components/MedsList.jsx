@@ -12,14 +12,17 @@ function MedsList(props){
           name={medication.name}
           take={medication.take}
           timeSinceTaken={medication.timeSinceTaken}
-          key={index}/>
+          key={index}
+          id={medication.id}
+          handleTimerReset={props.handleTimerReset}/>
       )}
     </div>
   );
 }
 
 MedsList.propTypes = {
-  medList: PropTypes.array
+  medList: PropTypes.array,
+  handleTimerReset: PropTypes.func
 };
 
 export default MedsList;

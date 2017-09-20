@@ -12,6 +12,10 @@ class Medication {
     this.timeSinceTaken = this.timeTaken.fromNow(true);
   }
 
+  resetTimeSinceTaken(){
+    this.timeSinceTaken = new Moment();
+  }
+
 }
 
 export default Medication;
