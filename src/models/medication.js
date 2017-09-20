@@ -5,7 +5,7 @@ class Medication {
     this.name = name;
     this.take = take;
     this.timeTaken = new Moment();
-    this.timeSinceTaken = "a few seconds";
+    this.timeSinceTaken = "You have not taken this medicine.";
   }
 
   setTimeSinceTaken(){

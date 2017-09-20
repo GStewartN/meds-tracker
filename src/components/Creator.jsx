@@ -15,7 +15,7 @@ class Creator extends React.Component {
   componentDidMount(){
     this.timeSinceTakenChecker = setInterval(() =>
       this.updateMedTimeSinceTaken(),
-      5000
+    5000
     );
   }
 
