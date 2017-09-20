@@ -7,8 +7,8 @@ function Medication(props) {
     <div>
       <p><em>{props.name}</em></p>
       <p>I need to take this: {props.take}</p>
-      <p>My last dose was: {props.timeSinceTaken}</p>
-      <button onClick={() => { props.handleTimerReset(props.id) }}>Take Medicine</button>
+      <p>My last dose was: {props.timeSinceTaken} ago</p>
+      <button onClick={() => { props.handleTimerReset(props.medication) }}>Take Medicine</button>
       <hr/>
     </div>
   );
@@ -19,7 +19,7 @@ Medication.propTypes = {
   take: PropTypes.string,
   timeSinceTaken: PropTypes.string,
   handleTimerReset: PropTypes.func,
-  id: PropTypes.string
+  medication: PropTypes.object
 };
 
 export default Medication;

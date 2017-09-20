@@ -13,8 +13,13 @@ class Creator extends React.Component {
     this.handleTimerReset = this.handleTimerReset.bind(this);
   }
 
-  handleTimerReset(medicationId){
-    console.log("Clicky-Clickety-Click");
+  handleTimerReset(medication){
+    let newMasterMedList = this.state.masterMedList.slice();
+    newMasterMedList.forEach((medication) =>
+      medication.timeSinceTaken = medication.resetTimeSinceTaken()
+    );
+    this.setState({masterMedList: newMasterMedList});
+    console.log(medication);
   }
 
   componentDidMount(){

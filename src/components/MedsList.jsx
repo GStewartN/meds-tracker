@@ -13,7 +13,7 @@ function MedsList(props){
           take={medication.take}
           timeSinceTaken={medication.timeSinceTaken}
           key={index}
-          id={medication.id}
+          medication={medication}
           handleTimerReset={props.handleTimerReset}/>
       )}
     </div>
