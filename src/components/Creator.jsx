@@ -20,7 +20,7 @@ class Creator extends React.Component {
         medication.resetTimeSinceTaken();
       }
     });
-      this.setState({masterMedList: newMasterMedList});
+    this.setState({masterMedList: newMasterMedList});
   }
 
   componentDidMount(){
